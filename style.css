@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #916abe;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    
+}
+
+.container {
+    display: block;
+    padding: 20px;
+    
+}
+
+.left-column, .left-column {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+h2 {
+    border-bottom: 2px solid #9e4caf;
+    padding-bottom: 4px;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
