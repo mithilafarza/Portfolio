@@ -235,3 +235,23 @@ button:nth-child(2):hover{
 .card p {
   color: #f0f0f0;
 }
+
+
+
+
+
+.right-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
