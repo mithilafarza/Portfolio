@@ -12,9 +12,8 @@
 
 .portfolio-container{
   min-height: 100vh;
-  width: 100%;
+  width: 108%;
   display:flex;
-  flex-wrap: wrap;
   background: linear-gradient(-45deg, #be846c, #9e0e56 70%);
 }
 .navlist{
@@ -38,12 +37,11 @@
   position: relative;
 }
 .left-container, .right-container{
-  flex: 1 1 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+
 }
 
 
@@ -75,8 +73,7 @@
   gap:3rem;
 }
 .content{
-  margin-left: 0;
-  text-align: center;
+  margin-left: 7rem;
 }
 .content .intro{
   font-size: 1.5rem;
@@ -264,49 +261,4 @@ button:nth-child(2):hover{
 
 
 
-
-
-
-@media (max-width: 992px) {
-  .left-container {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 0;
-  }
-
-  .content h3 {
-    font-size: 2.5rem;
-  }
-
-  .content .detail {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-
-  .btn-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .design .circle {
-    display: none; /* hide on small screens */
-  }
-
-  .navlist {
-    flex-direction: column;
-    height: auto;
-    gap: 1.2rem;
-    padding: 1rem 0;
-  }
-
-  .card-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
 
