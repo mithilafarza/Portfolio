@@ -1,26 +1,19 @@
-/* === YOUR ORIGINAL CSS (WITH MINOR FIXES) === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-* {
+*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}
-html {
-  scroll-behavior: smooth; /* For smooth scrolling to sections */
-}
-body {
-  overflow-x: hidden; /* Prevents horizontal scrollbar */
-}
-
-.poppins-medium{
+}  .poppins-medium{
   font-weight: 500;
   font-style: normal;
+  
 }
 
 .portfolio-container{
   min-height: 100vh;
-  width: 100%; /* Changed from 108% to 100% to prevent overflow */
+  width: 108%;
   display:flex;
   background: linear-gradient(-45deg, #be846c, #9e0e56 70%);
 }
@@ -50,15 +43,21 @@ body {
   align-items: center;
 }
 
+
 .left-container {
+  /*background: #9e0e56;*/
   width: 70%;
   padding-left: 3rem;
   z-index: 1;
+
 }
-.right-container {
+/*.right-container {
+  
+  background: linear-gradient(-45deg, #be846c , #9e0e56 70%);
   width: 30%;
-  position: relative; /* Needed for positioning the design element */
-}
+  position:-webkit-sticky;
+  z-index: 0;
+}*/
 
 .icons .fa-brands{
   color: #fff;
@@ -73,7 +72,7 @@ body {
   gap:3rem;
 }
 .content{
-  margin-left: 4rem; /* Reduced margin slightly */
+  margin-left: 7rem;
 }
 .content .intro{
   font-size: 1.5rem;
@@ -92,9 +91,7 @@ body {
   max-width: 38rem;
   margin: 1.1rem 0 3rem 0;
   line-height: 1.8rem;
-}
-.btn-container {
-    display: flex; /* Helps in centering buttons on mobile */
+
 }
 .btn-container button{
   border: .1rem solid #2c0335;
@@ -103,6 +100,7 @@ body {
   border-radius: .5rem;
   cursor: pointer;
   transition: .5s ease;
+
 }
 button:nth-child(1){
   background: #2c0335;
@@ -132,19 +130,19 @@ button:nth-child(2):hover{
   position: absolute;
   border-radius: 50%;
   top: 50%;
-  left: 50%; /* Changed from 76% to better center within right-container */
+  left: 76%;
   transform: translate(-50% , -50%);
+
 }
 .circle:nth-child(1){
-  background: linear-gradient(90deg, transparent 50%, #9e0e56 50%);
+  background: linear-gradient(90deg, transparent 50% #9e0e56 50%);
   width: 40rem;
 }
 .circle:nth-child(2){
  background: white;
  width: 35rem;
  background-image: url("profile.jpg");
- background-size: cover; /* Use cover for better image scaling */
- background-position: center; /* Center the background image */
+ background-size: 100%;
  background-repeat: no-repeat;
  border: 1rem solid #fff;
  box-shadow: 
@@ -171,188 +169,71 @@ button:nth-child(2):hover{
 .navlist li a:hover::after{
   transform:scaleX(1);
   transform-origin: bottom left;
+
 }
 
-/* === PROJECTS SECTION === */
 .cards-section {
-  padding: 8rem 2rem 4rem 2rem; /* Added top padding to clear fixed nav */
+  padding: 4rem 2rem;
   background: linear-gradient(-45deg, #be846c, #9e0e56 70%);
   text-align: center;
 }
+
 .section-heading {
   font-size: 2.5rem;
-  color: #fff; /* Changed to white for better contrast */
+  color: #2c0335;
   margin-bottom: 3rem;
 }
+
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
+
 .card {
-  background: rgba(255, 255, 255, 0.1); /* Slightly more transparent */
+  background: white;
   padding: 2rem;
-  width: 300px;
+  width: 280px;
   border-radius: 1rem;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-  color: #fff;
-  backdrop-filter: blur(10px); 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-10px);
 }
+
 .card i {
-  font-size: 2.5rem;
-  color: #fff;
+  font-size: 2rem;
+  color: #9e0e56;
   margin-bottom: 1rem;
 }
+
 .card h3 {
   font-size: 1.25rem;
-  color: #fff;
+  color: #2c0335;
   margin-bottom: 0.5rem;
 }
+
 .card p {
   font-size: 0.95rem;
-  color: #f0f0f0;
+  color: #555;
   line-height: 1.5;
 }
 
-
-/* === RESPONSIVE DESIGN - MEDIA QUERIES === */
-
-/* For Tablets and smaller desktops (<= 1200px) */
-@media (max-width: 1200px) {
-    .content h3 {
-        font-size: 3.5rem;
-    }
-    .circle:nth-child(1) { width: 35rem; }
-    .circle:nth-child(2) { width: 30rem; }
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  width: 280px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px); 
+  transition: transform 0.3s ease;
 }
-
-/* For Tablets (<= 1024px) */
-@media (max-width: 1024px) {
-    .left-container {
-        width: 60%;
-    }
-    .right-container {
-        width: 40%;
-    }
-    .content {
-        margin-left: 2rem;
-    }
-    .content h3 {
-        font-size: 3rem;
-    }
-    .content .detail {
-        font-size: 1rem;
-        max-width: 100%;
-    }
-    .circle:nth-child(1) { width: 30rem; }
-    .circle:nth-child(2) { width: 25rem; }
-}
-
-
-/* For Mobile Devices (<= 768px) */
-@media (max-width: 768px) {
-    /* Stack hero section content vertically */
-    .portfolio-container {
-        flex-direction: column;
-        height: auto; /* Allow height to grow */
-    }
-
-    /* Adjust nav for mobile */
-    .navlist {
-        gap: 1.5rem; /* Reduce gap between links */
-        height: auto;
-        padding: 1rem 0;
-        background: rgba(0, 0, 0, 0.2); /* Add a slight background for visibility */
-    }
-
-    /* Re-style left and right containers */
-    .left-container, .right-container {
-        width: 100%;
-        height: auto;
-        padding: 2rem;
-    }
-
-    /* Put the image container first visually */
-    .left-container {
-        order: 2; /* Content comes after the image */
-        padding-top: 5rem; /* Space for the icons */
-        height: auto;
-    }
-    .right-container {
-        order: 1; /* Image comes first */
-        min-height: 60vh; /* Give image section some height */
-    }
-
-    /* Reposition social icons to be horizontal at the top of content */
-    .icons {
-        flex-direction: row;
-        position: absolute;
-        top: 100px; /* Position below nav */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        justify-content: center;
-    }
-    
-    /* Center text and adjust sizes */
-    .content {
-        margin-left: 0;
-        text-align: center;
-    }
-    .content h3 {
-        font-size: 2.5rem; /* Smaller heading for mobile */
-    }
-    .content .detail {
-        font-size: 0.9rem;
-    }
-    .btn-container {
-        justify-content: center; /* Center buttons */
-        flex-wrap: wrap; /* Allow buttons to wrap */
-        gap: 1rem;
-    }
-    .btn-container button {
-        margin-left: 0 !important;
-    }
-
-    /* Resize and recenter profile image */
-    .design {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .circle {
-        position: relative; /* Change from absolute to relative for flow */
-        left: auto;
-        top: auto;
-        transform: none;
-    }
-    .circle:nth-child(1) { 
-      width: 280px; /* Fixed pixel size for mobile */
-      position: absolute; /* Keep the background one absolute */
-    }
-    .circle:nth-child(2) { 
-      width: 240px; /* Fixed pixel size for mobile */
-      border-width: 0.5rem;
-      position: relative; /* Make image relative to stay centered */
-    }
-
-    /* Adjust project cards for mobile */
-    .cards-section {
-        padding: 4rem 1rem;
-    }
-    .card {
-        width: 100%; /* Make cards full width on small screens */
-        max-width: 320px;
-    }
+.card p {
+  color: #f0f0f0;
 }
 
 
