@@ -1,73 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Mithila Farjana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mithila Farjana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body> 
+    <div class="portfolio-container">
 
-  <ul class="navlist">
-    <li><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+       <ul class="navlist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
 
-  <div class="portfolio-container">
-    <div class="left-container">
-      <div class="icons">
-        <a href="https://linkedin.com/in/mithi06" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/mithi06" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://facebook.com/mithilafarjana" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://researchgate.net/profile/mithi06" target="_blank"><i class="fa-brands fa-researchgate"></i></a>
-      </div>
-      <div class="content">
-        <p class="intro">Hi There,<br/> I'm <span>Mithila Farjana</span></p>
-        <h3>Web Developer.</h3>
-        <p class="detail">I'm a Web Developer based in Dhaka, Bangladesh. I'm passionate about improving my coding skills and building beautiful, responsive websites. I create websites using HTML, CSS, and JavaScript. Currently working on personal projects to grow my skills. I love bringing ideas to life through web design and development.</p>
-        <div class="btn-container">
-          <button>About Me</button>
-          <button>Contact Me</button>
+       </ul>
+       <div class="left-container">
+         <div class="icons">
+            <a href="https://linkedin.com/in/mithi06" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/mithi06" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://facebook.com/mithilafarjana" target="_blank"><i class="fa-brands fa-facebook"></i>
+            <a href="https://researchgate.net/profile/mithi06" target="_blank"><i class="fa-brands fa-researchgate"></i></a>
+            
+         </div>
+         <div class="content">
+            <p class="intro">Hi There,<br/> I'm <span>Mithila Farjana</span></p>
+            <h3>Web Developer.</h3> 
+            <p class="detail"> I'm a Web Developer based in Dhaka, Bangladesh. I'm passionate about improving my coding skills and building beautiful, responsive websites. I create websites using HTML, CSS, and JavaScript. Currently working on personal projects to grow my skills. I love bringing ideas to life through web design and development.</p>
+            <div class="btn-container">
+               <button>About Me</button>
+                <button>Contact Me</button>
+            </div>
+         </div>
+       </div>
+        <div class="right-container">
+             <div class="design">
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+</div>
         </div>
-      </div>
-    </div>
 
-    <div class="right-container">
-      <div class="design">
-        <div class="circle"></div>
-        <div class="circle"></div>
-      </div>
+</div>
+    
+
+       </div>
+<section id="projects" class="cards-section">
+  <h2 class="section-heading">Projects</h2>
+  <div class="card-wrapper">
+    <div class="card">
+      <i class="fa-solid fa-code"></i>
+      <h3>Portfolio Website</h3>
+      <p>A responsive portfolio using HTML, CSS, and JavaScript to showcase my skills.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-robot"></i>
+      <h3>Object-Moving Robot</h3>
+      <p>Built a robot that can track items, monitor stock levels and detect stock-outs.</p>
+    </div>
+    <div class="card">
+      <i class="fa-solid fa-database"></i>
+      <h3>Non-Profit DBMS Project</h3>
+      <p> A comprehensive management system for nonprofit organizations.</p>
     </div>
   </div>
+</section>
 
-  <section id="projects" class="cards-section">
-    <h2 class="section-heading">Projects</h2>
-    <div class="card-wrapper">
-      <div class="card">
-        <i class="fa-solid fa-code"></i>
-        <h3>Portfolio Website</h3>
-        <p>A responsive portfolio using HTML, CSS, and JavaScript to showcase my skills.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-robot"></i>
-        <h3>Object-Moving Robot</h3>
-        <p>Built a robot that can track items, monitor stock levels and detect stock-outs.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-database"></i>
-        <h3>Non-Profit DBMS Project</h3>
-        <p>A comprehensive management system for nonprofit organizations.</p>
-      </div>
-    </div>
-  </section>
-
+</div>
 </body>
 </html>
