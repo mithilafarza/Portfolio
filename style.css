@@ -236,6 +236,22 @@ button:nth-child(2):hover{
   color: #f0f0f0;
 }
 
+/*to make responsive*/
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .left-content, .right-content {
+    width: 100%;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+
 
 
 
