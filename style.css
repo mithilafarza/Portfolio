@@ -1,46 +1,161 @@
 
-background-image: url("profile.jpg");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-* {
+*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}  .poppins-medium{
+  font-weight: 500;
+  font-style: normal;
+  
 }
 
-body {
-  overflow-x: hidden;
+.portfolio-container{
+  min-height: 100vh;
+  width: 108%;
+  display:flex;
+  background: linear-gradient(-45deg, #be846c, #9e0e56 70%);
 }
-
-.navlist {
-  display: flex;
+.navlist{
+  display:flex;
   gap: 3.5rem;
   height: 15vh;
   width: 100%;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-color: #2c0335;
+  z-index: 10; 
 }
-
-.navlist li {
+.navlist li{
   list-style: none;
 }
-
-.navlist li a {
-  text-decoration: none;
-  text-transform: uppercase;
+.navlist li a{
+  text-decoration:none;
+  text-transform:uppercase;
   font-size: 1rem;
   color: #fff;
   position: relative;
 }
+.left-container, .right-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
 
-.navlist li a::after {
-  content: "";
+
+.left-container {
+  /*background: #9e0e56;*/
+  width: 70%;
+  padding-left: 3rem;
+  z-index: 1;
+
+}
+/*.right-container {
+  
+  background: linear-gradient(-45deg, #be846c , #9e0e56 70%);
+  width: 30%;
+  position:-webkit-sticky;
+  z-index: 0;
+}*/
+
+.icons .fa-brands{
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.icons{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  gap:3rem;
+}
+.content{
+  margin-left: 7rem;
+}
+.content .intro{
+  font-size: 1.5rem;
+  color:#fff;
+}
+.content .intro span{
+  color:#2c0335;
+}
+.content h3{
+  font-size: 4rem;
+  color: #2c0335;
+}
+.content .detail{
+  font-size: 1.1rem;
+  color:#fff;
+  max-width: 38rem;
+  margin: 1.1rem 0 3rem 0;
+  line-height: 1.8rem;
+
+}
+.btn-container button{
+  border: .1rem solid #2c0335;
+  font-size: 1.1rem;
+  padding: .8rem 1.5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: .5s ease;
+
+}
+button:nth-child(1){
+  background: #2c0335;
+  color:#fff;
+}
+button:nth-child(2){
+  background: transparent;
+  color:#fff;
+  margin-left: 2rem;
+}
+button:nth-child(1):hover{
+  background: transparent;
+  color:#fff;
+}
+button:nth-child(2):hover{
+  background:#2c0335 ;
+  color:#fff;
+}
+.icons .fa-brands:hover{
+  cursor: pointer;
+  background: linear-gradient(#fff, #2c0335);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.design .circle{
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 76%;
+  transform: translate(-50% , -50%);
+
+}
+.circle:nth-child(1){
+  background: linear-gradient(90deg, transparent 50% #9e0e56 50%);
+  width: 40rem;
+}
+.circle:nth-child(2){
+ background: white;
+ width: 35rem;
+ background-image: url("profile.jpg");
+ background-size: 100%;
+ background-repeat: no-repeat;
+ border: 1rem solid #fff;
+ box-shadow: 
+ 0 0 1rem #fff,
+ inset 0 0 1rem #fff,
+ 0 0 2rem #be846c,
+ inset 0 0 2rem #be846c,
+ 0 0 4rem #be846c,
+ inset 0 0 4rem #be846c;
+}
+.navlist li a::after{
+  content:"";
   position: absolute;
   background: #fff;
   width: 100%;
@@ -52,135 +167,10 @@ body {
   transition: transform .5s;
 }
 
-.navlist li a:hover::after {
-  transform: scaleX(1);
+.navlist li a:hover::after{
+  transform:scaleX(1);
   transform-origin: bottom left;
-}
 
-.portfolio-container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  background: linear-gradient(-45deg, #be846c, #9e0e56 70%);
-  padding-top: 15vh;
-}
-
-.left-container, .right-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.left-container {
-  width: 70%;
-  padding-left: 3rem;
-  z-index: 1;
-}
-
-.icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-
-.icons .fa-brands {
-  color: #fff;
-  font-size: 1.7rem;
-}
-
-.icons .fa-brands:hover {
-  cursor: pointer;
-  background: linear-gradient(#fff, #2c0335);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.content {
-  margin-left: 7rem;
-}
-
-.content .intro {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.content .intro span {
-  color: #2c0335;
-}
-
-.content h3 {
-  font-size: 4rem;
-  color: #2c0335;
-}
-
-.content .detail {
-  font-size: 1.1rem;
-  color: #fff;
-  max-width: 38rem;
-  margin: 1.1rem 0 3rem 0;
-  line-height: 1.8rem;
-}
-
-.btn-container button {
-  border: .1rem solid #2c0335;
-  font-size: 1.1rem;
-  padding: .8rem 1.5rem;
-  border-radius: .5rem;
-  cursor: pointer;
-  transition: .5s ease;
-}
-
-button:nth-child(1) {
-  background: #2c0335;
-  color: #fff;
-}
-
-button:nth-child(2) {
-  background: transparent;
-  color: #fff;
-  margin-left: 2rem;
-}
-
-button:nth-child(1):hover {
-  background: transparent;
-  color: #fff;
-}
-
-button:nth-child(2):hover {
-  background: #2c0335;
-  color: #fff;
-}
-
-.design .circle {
-  aspect-ratio: 1;
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: 76%;
-  transform: translate(-50%, -50%);
-}
-
-.circle:nth-child(1) {
-  background: linear-gradient(90deg, transparent 50%, #9e0e56 50%);
-  width: 40rem;
-}
-
-.circle:nth-child(2) {
-  background: white;
-  width: 35rem;
-  background-image: url("profile.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border: 1rem solid #fff;
-  box-shadow:
-    0 0 1rem #fff,
-    inset 0 0 1rem #fff,
-    0 0 2rem #be846c,
-    inset 0 0 2rem #be846c,
-    0 0 4rem #be846c,
-    inset 0 0 4rem #be846c;
 }
 
 .cards-section {
@@ -203,13 +193,11 @@ button:nth-child(2):hover {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.08);
+  background: white;
   padding: 2rem;
   width: 280px;
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -225,96 +213,28 @@ button:nth-child(2):hover {
 
 .card h3 {
   font-size: 1.25rem;
-  color: #fff;
+  color: #2c0335;
   margin-bottom: 0.5rem;
 }
 
 .card p {
   font-size: 0.95rem;
-  color: #f0f0f0;
+  color: #555;
   line-height: 1.5;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .portfolio-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .left-container,
-  .right-container {
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .icons {
-    flex-direction: row;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .content {
-    margin-left: 0;
-    padding: 1rem;
-  }
-
-  .circle {
-    width: 18rem !important;
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-    margin: 2rem auto;
-  }
-
-  .circle:nth-child(2) {
-    width: 16rem !important;
-    background-size: cover;
-  }
-
-  .navlist {
-    flex-direction: column;
-    gap: 1rem;
-    position: static;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .navlist li a {
-    font-size: 1.2rem;
-  }
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  width: 280px;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px); 
+  transition: transform 0.3s ease;
+}
+.card p {
+  color: #f0f0f0;
 }
 
-@media (max-width: 600px) {
-  .content h3 {
-    font-size: 2rem;
-  }
-
-  .content .intro {
-    font-size: 1.2rem;
-  }
-
-  .content .detail {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .btn-container button {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  .card-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
+background-image: url("profile.jpg");
